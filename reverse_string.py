@@ -13,5 +13,14 @@ def reverse (str):
     reversedString = str.join(reversedList) #join the list into a string
     print(reversedString)  # reversed string
 
+# 2. Write a python program to reverse the order of words in a string.
+def reverseWords (str):
+    a = str.split() # Split the string
+    a.reverse() # reverse the list
+    result = " ".join(a) #join the list together
+    print(result) #reverse order of words
+
+
 if __name__ == "__main__":
     reverse("Authentise")
+    reverseWords("Authentise seems like an interesting company to work for")

@@ -1,5 +1,6 @@
-
-
+#!/usr/bin/env python3
+import os.path
+import sys
 
 #1. Write a python program to reverse a string.
 
@@ -22,5 +23,22 @@ def reverseWords (str):
 
 
 if __name__ == "__main__":
-    reverse("Authentise")
-    reverseWords("Authentise seems like an interesting company to work for")
+   # reverse("Authentise")
+   # reverseWords("Authentise seems like an interesting company to work for")
+ #3. Write  a python program that takes a string at the command line, and a flag
+
+   argv = sys.argv
+   byletter = "-r" in argv
+   if byletter: argv.remove("-r") #isolates and checks if ist a -r flag
+   byword = "-w" in argv
+   if byword: argv.remove("-w")#isolates and checks if its a -w flag
+   value = argv[1]
+   if byletter: #runs reverse if proper flag
+       reverse(value)
+   elif byword: #runs reverseWords if proper flag
+       reverseWords(value)
+   else:
+      print("invalid flags, value: ", value) #If no flag is set returns string
+
+
+

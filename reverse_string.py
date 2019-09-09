@@ -22,23 +22,24 @@ def reverseWords (str):
     print(result) #reverse order of words
 
 
+
 if __name__ == "__main__":
    # reverse("Authentise")
    # reverseWords("Authentise seems like an interesting company to work for")
- #3. Write  a python program that takes a string at the command line, and a flag
-
+   #3. Write  a python program that takes a string at the command line, and a flag
    argv = sys.argv
    byletter = "-r" in argv
    if byletter: argv.remove("-r") #isolates and checks if ist a -r flag
    byword = "-w" in argv
    if byword: argv.remove("-w")#isolates and checks if its a -w flag
    value = argv[1]
+   if os.path.isfile(value): #checks if the imput is a file
+     f=open(value, "r") #opens file  in read mode
+     if f.mode == 'r': #checks if its read mode
+        value=f.read() #sets value to contents
    if byletter: #runs reverse if proper flag
        reverse(value)
    elif byword: #runs reverseWords if proper flag
        reverseWords(value)
    else:
       print("invalid flags, value: ", value) #If no flag is set returns string
-
-
-

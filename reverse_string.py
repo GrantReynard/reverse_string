@@ -12,3 +12,6 @@ def reverse (str):
     str = "" # create empty string
     reversedString = str.join(reversedList) #join the list into a string
     print(reversedString)  # reversed string
+
+if __name__ == "__main__":
+    reverse("Authentise")

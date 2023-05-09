@@ -2,6 +2,7 @@
 import os.path
 import sys
 
+# Written goals
 #1. Write a python program to reverse a string.
 
 def reverse (str):
